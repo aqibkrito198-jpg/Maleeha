@@ -1,0 +1,1578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Maleeha ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#08040b;
+    color:white;
+    font-family:Georgia,serif;
+    overflow-x:hidden;
+}
+
+/* BACKGROUND */
+#stars{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:-2;
+}
+
+.star{
+    position:absolute;
+    width:2px;
+    height:2px;
+    background:white;
+    border-radius:50%;
+    animation:twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle{
+    from{opacity:.2}
+    to{opacity:1}
+}
+
+/* FLOATING HEARTS */
+
+#hearts{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:5;
+}
+
+.floatHeart{
+    position:absolute;
+    bottom:-50px;
+    animation:floatHeart 7s linear forwards;
+    opacity:.7;
+}
+
+@keyframes floatHeart{
+    0%{
+        transform:translateY(0) rotate(0);
+        opacity:0;
+    }
+
+    20%{
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(-110vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+/* COMMON */
+
+section{
+    min-height:100vh;
+    padding:70px 18px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.container{
+    width:100%;
+    max-width:700px;
+}
+
+.card{
+    background:rgba(35,15,35,.82);
+    border:1px solid rgba(255,150,210,.2);
+    border-radius:25px;
+    padding:30px 20px;
+    margin:20px auto;
+    box-shadow:0 15px 60px rgba(0,0,0,.5);
+    backdrop-filter:blur(10px);
+}
+
+h1{
+    font-size:clamp(40px,11vw,70px);
+}
+
+h2{
+    font-size:clamp(28px,8vw,42px);
+    margin-bottom:15px;
+}
+
+h3{
+    margin-bottom:10px;
+}
+
+p{
+    line-height:1.8;
+    color:#eadce8;
+}
+
+.pink{
+    color:#ff83bd;
+}
+
+.gold{
+    color:#ffd98b;
+}
+
+.center{
+    text-align:center;
+}
+
+button{
+    font-family:inherit;
+}
+
+/* BUTTON */
+
+.btn{
+    border:none;
+    color:white;
+    background:linear-gradient(135deg,#ff3f98,#9b276c);
+    padding:14px 23px;
+    border-radius:50px;
+    margin:8px 4px;
+    font-weight:bold;
+    font-size:15px;
+    box-shadow:0 8px 25px rgba(255,40,140,.25);
+    transition:.3s;
+}
+
+.btn:active{
+    transform:scale(.94);
+}
+
+/* PASSWORD */
+
+#passwordScreen{
+    min-height:100vh;
+    background:
+    radial-gradient(circle at center,#38142f 0%,#130817 45%,#050307 100%);
+}
+
+.lockHeart{
+    font-size:85px;
+    animation:heartbeat 1.4s infinite;
+}
+
+@keyframes heartbeat{
+    0%,100%{transform:scale(1)}
+    15%{transform:scale(1.15)}
+    30%{transform:scale(1)}
+}
+
+.passwordBox{
+    width:100%;
+    max-width:500px;
+}
+
+input{
+    width:100%;
+    padding:15px;
+    margin:18px 0 8px;
+    border-radius:15px;
+    border:1px solid #71365b;
+    background:#160b18;
+    color:white;
+    text-align:center;
+    outline:none;
+}
+
+#error{
+    color:#ff79b5;
+    min-height:25px;
+}
+
+/* HERO */
+
+#home{
+    text-align:center;
+    background:
+    radial-gradient(circle at 50% 20%,#38162f 0%,transparent 45%);
+}
+
+.moon{
+    font-size:55px;
+    margin-bottom:15px;
+}
+
+.glow{
+    animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+    from{
+        text-shadow:0 0 10px #ff6dae;
+    }
+    to{
+        text-shadow:
+        0 0 20px #ff6dae,
+        0 0 45px #ff238d;
+    }
+}
+
+.quote{
+    font-size:18px;
+    font-style:italic;
+    margin:20px auto;
+}
+
+/* HUG */
+
+.hugHeart{
+    border:none;
+    background:none;
+    font-size:110px;
+    cursor:pointer;
+    filter:drop-shadow(0 0 20px #ff3f9c);
+    animation:heartbeat 1.4s infinite;
+}
+
+/* MEMORY CARDS */
+
+.reasons{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+    margin-top:20px;
+}
+
+.reason{
+    min-height:130px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:15px;
+    border-radius:18px;
+    background:#160b17;
+    border:1px solid #48223e;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.reason.open{
+    background:linear-gradient(135deg,#6e2350,#291129);
+}
+
+/* ENVELOPES */
+
+.envelopes{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+    margin-top:20px;
+}
+
+.envelope{
+    border:1px solid #5c2a4b;
+    background:#170b18;
+    color:white;
+    border-radius:20px;
+    padding:25px 10px;
+    cursor:pointer;
+}
+
+.envelope span{
+    display:block;
+    font-size:38px;
+    margin-bottom:10px;
+}
+
+.message{
+    min-height:120px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:20px;
+}
+
+/* GAME */
+
+.game{
+    height:350px;
+    border-radius:20px;
+    background:#0d070f;
+    border:1px solid #3e1d37;
+    position:relative;
+    overflow:hidden;
+    margin-top:20px;
+}
+
+.gameHeart{
+    position:absolute;
+    background:none;
+    border:none;
+    font-size:32px;
+    cursor:pointer;
+}
+
+.progress{
+    height:8px;
+    background:#281525;
+    border-radius:10px;
+    overflow:hidden;
+    margin:15px 0;
+}
+
+.progressBar{
+    height:100%;
+    width:0%;
+    background:#ff63ad;
+    transition:.3s;
+}
+
+/* TIMELINE */
+
+.timeline{
+    border-left:2px solid #ff5fa9;
+    margin:30px 10px;
+    padding-left:25px;
+}
+
+.timelineItem{
+    position:relative;
+    margin-bottom:35px;
+}
+
+.timelineItem:before{
+    content:"";
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    background:#ff68ae;
+    position:absolute;
+    left:-32px;
+    top:5px;
+    box-shadow:0 0 15px #ff68ae;
+}
+
+/* TEXT AREA */
+
+textarea{
+    width:100%;
+    min-height:130px;
+    background:#100811;
+    color:white;
+    border:1px solid #542541;
+    border-radius:15px;
+    padding:15px;
+    outline:none;
+    resize:vertical;
+}
+
+/* FINAL */
+
+#final{
+    text-align:center;
+}
+
+.bigHeart{
+    font-size:100px;
+    animation:heartbeat 1.5s infinite;
+}
+
+/* FIREWORK */
+
+.firework{
+    position:fixed;
+    z-index:100;
+    pointer-events:none;
+    font-size:30px;
+    animation:explode 1.5s forwards;
+}
+
+@keyframes explode{
+    from{
+        transform:translate(0,0) scale(.3);
+        opacity:1;
+    }
+
+    to{
+        transform:translate(var(--x),var(--y)) scale(1.5);
+        opacity:0;
+    }
+}
+
+/* MUSIC */
+
+.music{
+    position:fixed;
+    bottom:15px;
+    right:15px;
+    z-index:50;
+    background:#21101e;
+    border:1px solid #633252;
+    padding:10px 15px;
+    border-radius:50px;
+}
+
+.music button{
+    background:none;
+    border:none;
+    color:white;
+    font-size:18px;
+}
+
+/* MOBILE */
+
+@media(max-width:500px){
+
+    section{
+        padding:60px 12px;
+    }
+
+    .card{
+        padding:25px 15px;
+    }
+
+    .reasons{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .envelopes{
+        grid-template-columns:1fr 1fr;
+    }
+
+    h1{
+        font-size:44px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- STARS -->
+<div id="stars"></div>
+
+<!-- FLOATING HEARTS -->
+<div id="hearts"></div>
+
+
+<!-- ============================= -->
+<!-- PASSWORD SCREEN -->
+<!-- ============================= -->
+
+<section id="passwordScreen">
+
+<div class="passwordBox center">
+
+<div class="lockHeart">❤️</div>
+
+<p>THIS LITTLE PLACE IS FOR</p>
+
+<h1 class="pink glow">Maleeha</h1>
+
+<p class="quote">
+"Somewhere between the stars and my heart,
+there's a little place with your name on it."
+</p>
+
+<input
+id="password"
+type="password"
+placeholder="Enter our secret..."
+>
+
+<button class="btn" onclick="unlock()">
+Open My Heart ❤️
+</button>
+
+<div id="error"></div>
+
+</div>
+
+</section>
+
+
+<!-- ============================= -->
+<!-- MAIN WEBSITE -->
+<!-- ============================= -->
+
+<main id="website" style="display:none;">
+
+
+<!-- HOME -->
+
+<section id="home">
+
+<div class="container center">
+
+<div class="moon">🌙✨</div>
+
+<p>FOR THE GIRL WHO MEANS MORE THAN SHE KNOWS</p>
+
+<h1 class="pink glow">
+Hey, Maleeha...
+</h1>
+
+<p class="quote">
+I know you're not feeling okay right now.
+You don't have to pretend to be happy here.
+Just stay with me for a few minutes. ❤️
+</p>
+
+<button class="btn" onclick="scrollToSection('hug')">
+I'm here 🥺
+</button>
+
+</div>
+
+</section>
+
+
+<!-- HUG -->
+
+<section id="hug">
+
+<div class="container">
+
+<div class="card center">
+
+<h2>Come here first 🫂</h2>
+
+<p>
+Before anything else...
+give me one virtual hug.
+</p>
+
+<button class="hugHeart" onclick="giveHug()">
+❤️
+</button>
+
+<div id="hugMessage" class="message">
+Tap the heart...
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- REMEMBER -->
+
+<section id="remember">
+
+<div class="container">
+
+<div class="card">
+
+<p>PLEASE REMEMBER</p>
+
+<h2>Things I want you to know</h2>
+
+<p>
+Tap every card.
+Keep the ones you need close to your heart.
+</p>
+
+<div class="reasons">
+
+<div class="reason" onclick="openReason(this,0)">
+Tap me 💗
+</div>
+
+<div class="reason" onclick="openReason(this,1)">
+Tap me 🌷
+</div>
+
+<div class="reason" onclick="openReason(this,2)">
+Tap me ✨
+</div>
+
+<div class="reason" onclick="openReason(this,3)">
+Tap me 🫂
+</div>
+
+<div class="reason" onclick="openReason(this,4)">
+Tap me 🥺
+</div>
+
+<div class="reason" onclick="openReason(this,5)">
+Tap me ❤️
+</div>
+
+<div class="reason" onclick="openReason(this,6)">
+Tap me 🌙
+</div>
+
+<div class="reason" onclick="openReason(this,7)">
+Tap me ♾️
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- OPEN WHEN -->
+
+<section id="letters">
+
+<div class="container">
+
+<div class="card">
+
+<p>OPEN WHEN...</p>
+
+<h2>I'm here for every version of you 💌</h2>
+
+<div class="envelopes">
+
+<button class="envelope"
+onclick="openLetter('sad')">
+
+<span>💔</span>
+
+You're sad
+
+</button>
+
+
+<button class="envelope"
+onclick="openLetter('hug')">
+
+<span>🫂</span>
+
+You need a hug
+
+</button>
+
+
+<button class="envelope"
+onclick="openLetter('overthink')">
+
+<span>🥺</span>
+
+You're overthinking
+
+</button>
+
+
+<button class="envelope"
+onclick="openLetter('miss')">
+
+<span>❤️</span>
+
+You miss me
+
+</button>
+
+</div>
+
+<div id="letterMessage" class="message">
+Choose an envelope...
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- GAME -->
+
+<section id="game">
+
+<div class="container">
+
+<div class="card center">
+
+<p>TINY MISSION</p>
+
+<h2>Make Maleeha Smile 💕</h2>
+
+<p>
+Catch 10 hearts to unlock your reward.
+</p>
+
+<div class="progress">
+
+<div id="progressBar"
+class="progressBar">
+</div>
+
+</div>
+
+<div id="gameArea" class="game">
+
+<p style="padding-top:140px;">
+Press start and catch the hearts ❤️
+</p>
+
+</div>
+
+<button class="btn" onclick="startGame()">
+Start Game 🎮
+</button>
+
+<div id="gameMessage" class="message"></div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- MEMORIES -->
+
+<section id="memories">
+
+<div class="container">
+
+<div class="card">
+
+<p>OUR LITTLE UNIVERSE</p>
+
+<h2>Us ❤️</h2>
+
+<div class="timeline">
+
+<div class="timelineItem">
+
+<h3>The Beginning 🌱</h3>
+
+<p>
+Somehow two people became an "us".
+And I'm still grateful for it.
+</p>
+
+</div>
+
+
+<div class="timelineItem">
+
+<h3>The Little Moments 🌷</h3>
+
+<p>
+The silly conversations,
+random laughs and tiny moments
+became some of my favorite memories.
+</p>
+
+</div>
+
+
+<div class="timelineItem">
+
+<h3>Today 🌙</h3>
+
+<p>
+Even on difficult days,
+I still want to be someone
+who listens and stays.
+</p>
+
+</div>
+
+
+<div class="timelineItem">
+
+<h3>The Future ♾️</h3>
+
+<p>
+More memories.
+More laughs.
+More ordinary days that become special
+because you're there.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="card center">
+
+<h2>Our Memories 📸</h2>
+
+<p>
+You can replace these with your real photos later.
+</p>
+
+<div class="reasons">
+
+<div class="reason">
+📷<br>
+Favorite Photo
+</div>
+
+<div class="reason">
+🌹<br>
+Favorite Memory
+</div>
+
+<div class="reason">
+😂<br>
+Our Inside Joke
+</div>
+
+<div class="reason">
+💌<br>
+Future Memory
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- WHAT SHE NEEDS -->
+
+<section id="need">
+
+<div class="container">
+
+<div class="card center">
+
+<p>NO PRESSURE</p>
+
+<h2>Tell me what you need ❤️</h2>
+
+<p>
+You don't have to explain everything.
+Just choose one.
+</p>
+
+<button class="btn"
+onclick="need('hug')">
+🫂 I need a hug
+</button>
+
+<button class="btn"
+onclick="need('listen')">
+👂 Just listen
+</button>
+
+<button class="btn"
+onclick="need('me')">
+❤️ I need you
+</button>
+
+<div id="needMessage" class="message"></div>
+
+<textarea
+id="feelings"
+placeholder="Or tell me what's on your mind..."
+></textarea>
+
+<br>
+
+<button class="btn"
+onclick="saveFeelings()">
+Save My Words 💌
+</button>
+
+<p id="savedMessage"></p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FINAL -->
+
+<section id="final">
+
+<div class="container">
+
+<div class="card center">
+
+<p>ONE LAST THING...</p>
+
+<h2>For You, Maleeha ❤️</h2>
+
+<div id="typingText"
+class="message"
+style="min-height:300px;">
+</div>
+
+<button class="btn"
+onclick="finalSurprise()">
+
+I smiled ❤️
+
+</button>
+
+<div id="finalMessage"></div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<footer class="center" style="padding:30px;">
+Made with an unreasonable amount of love for Maleeha. ❤️
+</footer>
+
+
+</main>
+
+
+<!-- MUSIC -->
+<div class="music">
+
+<button onclick="musicToggle()">
+🎵
+</button>
+
+<audio id="music" loop>
+
+<!--
+OPTIONAL:
+Put your MP3 URL here.
+
+Example:
+
+<source
+src="YOUR-MUSIC-LINK.mp3"
+type="audio/mpeg">
+
+-->
+
+</audio>
+
+</div>
+
+
+<script>
+
+/* ===================================
+   ⭐ EASY CUSTOMIZATION
+   =================================== */
+
+/* CHANGE PASSWORD HERE */
+
+const PASSWORD = "maleeha";
+
+
+/* CHANGE YOUR NAME HERE */
+
+const YOUR_NAME = "Your person";
+
+
+/* ===================================
+   STARS
+   =================================== */
+
+const stars = document.getElementById("stars");
+
+for(let i=0;i<100;i++){
+
+    const star = document.createElement("div");
+
+    star.className = "star";
+
+    star.style.left =
+        Math.random()*100 + "%";
+
+    star.style.top =
+        Math.random()*100 + "%";
+
+    star.style.animationDelay =
+        Math.random()*3 + "s";
+
+    stars.appendChild(star);
+}
+
+
+/* ===================================
+   FLOATING HEARTS
+   =================================== */
+
+setInterval(function(){
+
+    const heart =
+        document.createElement("div");
+
+    heart.className = "floatHeart";
+
+    const hearts =
+        ["❤️","💗","💕","🌸","✨"];
+
+    heart.innerHTML =
+        hearts[Math.floor(Math.random()*hearts.length)];
+
+    heart.style.left =
+        Math.random()*100 + "%";
+
+    heart.style.fontSize =
+        (15 + Math.random()*20) + "px";
+
+    heart.style.animationDuration =
+        (5 + Math.random()*5) + "s";
+
+    document
+        .getElementById("hearts")
+        .appendChild(heart);
+
+    setTimeout(function(){
+        heart.remove();
+    },10000);
+
+},800);
+
+
+/* ===================================
+   PASSWORD
+   =================================== */
+
+function unlock(){
+
+    const entered =
+        document
+        .getElementById("password")
+        .value
+        .trim()
+        .toLowerCase();
+
+    if(entered === PASSWORD.toLowerCase()){
+
+        document
+        .getElementById("passwordScreen")
+        .style.display="none";
+
+        document
+        .getElementById("website")
+        .style.display="block";
+
+        startTyping();
+
+    }else{
+
+        document
+        .getElementById("error")
+        .innerHTML =
+        "That's not our secret 🥺";
+
+    }
+
+}
+
+
+document
+.getElementById("password")
+.addEventListener("keydown",function(e){
+
+    if(e.key === "Enter"){
+        unlock();
+    }
+
+});
+
+
+/* ===================================
+   SCROLL
+   =================================== */
+
+function scrollToSection(id){
+
+    document
+    .getElementById(id)
+    .scrollIntoView({
+        behavior:"smooth"
+    });
+
+}
+
+
+/* ===================================
+   HUG
+   =================================== */
+
+function giveHug(){
+
+    document
+    .getElementById("hugMessage")
+    .innerHTML =
+
+    "<h3>Hug delivered successfully 🫂❤️</h3>" +
+
+    "<p>" +
+    "And no, you don't get to return it. " +
+    "I'm keeping you in this hug for a little longer." +
+    "</p>";
+
+    fireworks(12);
+
+}
+
+
+/* ===================================
+   REASONS
+   =================================== */
+
+const reasons = [
+
+"You're loved, even on the days you don't feel lovable. ❤️",
+
+"You're important to me, more than you probably realize. 🌷",
+
+"You don't have to be okay every single day. 🌙",
+
+"Your feelings matter. You never have to apologize for them.",
+
+"I'm proud of you for making it through days nobody else sees. 🥺",
+
+"You make my world softer just by being in it. ❤️",
+
+"You don't have to face everything alone. I'm here. 🫂",
+
+"Whatever today feels like, it doesn't get to decide your whole future. ♾️"
+
+];
+
+
+function openReason(element,index){
+
+    if(element.classList.contains("open")){
+        return;
+    }
+
+    element.classList.add("open");
+
+    element.innerHTML =
+        reasons[index];
+
+}
+
+
+/* ===================================
+   LETTERS
+   =================================== */
+
+const letters = {
+
+sad:
+
+"Hey... come here. 🫂 " +
+
+"You don't need to force a smile for me. " +
+
+"If today hurts, let it hurt. " +
+
+"Rest, breathe and take your time. " +
+
+"I don't love you only when you're happy. " +
+
+"I'm here for the quiet days too. ❤️",
+
+
+hug:
+
+"Imagine me pulling you into the longest hug right now. 🫂 " +
+
+"No advice. No questions. " +
+
+"Just warmth, silence and me reminding you " +
+
+"that you're not alone.",
+
+
+overthink:
+
+"Hey, breathe. 🌙 " +
+
+"Not every thought deserves an answer tonight. " +
+
+"You don't have to solve tomorrow right now. " +
+
+"One breath. One minute. One step. " +
+
+"I'm with you.",
+
+
+miss:
+
+"If you miss me, close your eyes for a second " +
+
+"and imagine my hand in yours. ❤️ " +
+
+"Distance can't erase the care I have for you. " +
+
+"Now give me one tiny smile. 🥺"
+
+};
+
+
+function openLetter(type){
+
+    document
+    .getElementById("letterMessage")
+    .innerHTML =
+    "<p>" + letters[type] + "</p>";
+
+}
+
+
+/* ===================================
+   GAME
+   =================================== */
+
+let score = 0;
+
+let gameRunning = false;
+
+let currentHeart = null;
+
+
+function startGame(){
+
+    score = 0;
+
+    gameRunning = true;
+
+    document
+    .getElementById("progressBar")
+    .style.width="0%";
+
+    document
+    .getElementById("gameMessage")
+    .innerHTML="";
+
+    const area =
+        document.getElementById("gameArea");
+
+    area.innerHTML="";
+
+    spawnHeart();
+
+}
+
+
+function spawnHeart(){
+
+    if(!gameRunning){
+        return;
+    }
+
+    const area =
+        document.getElementById("gameArea");
+
+    const heart =
+        document.createElement("button");
+
+    heart.className="gameHeart";
+
+    heart.innerHTML =
+        ["❤️","💗","💕","🌸"]
+        [Math.floor(Math.random()*4)];
+
+    heart.style.left =
+        (5+Math.random()*85)+"%";
+
+    heart.style.top =
+        (5+Math.random()*80)+"%";
+
+    heart.onclick=function(){
+
+        score++;
+
+        heart.remove();
+
+        document
+        .getElementById("progressBar")
+        .style.width =
+        (score*10)+"%";
+
+        if(score>=10){
+
+            gameRunning=false;
+
+            document
+            .getElementById("gameMessage")
+            .innerHTML =
+
+            "<h3>YOU DID IT! 😭❤️</h3>" +
+
+            "<p>" +
+
+            "Your reward is one unlimited " +
+
+            "lifetime supply of my hugs. 🫂" +
+
+            "</p>";
+
+            fireworks(30);
+
+        }else{
+
+            spawnHeart();
+
+        }
+
+    };
+
+    area.appendChild(heart);
+
+}
+
+
+/* ===================================
+   NEED
+   =================================== */
+
+function need(type){
+
+    let message="";
+
+    if(type==="hug"){
+
+        message =
+        "Then come here. 🫂 " +
+        "No fixing. No advice. " +
+        "Just a big hug.";
+
+    }
+
+    if(type==="listen"){
+
+        message =
+        "Okay. I'm listening. 👂 " +
+        "Say whatever you need to say. " +
+        "You don't have to make it sound pretty.";
+
+    }
+
+    if(type==="me"){
+
+        message =
+        "I'm here. ❤️ " +
+        "Right now, this moment, " +
+        "you have my attention and my care.";
+
+    }
+
+    document
+    .getElementById("needMessage")
+    .innerHTML =
+    "<p>"+message+"</p>";
+
+}
+
+
+function saveFeelings(){
+
+    const text =
+        document
+        .getElementById("feelings")
+        .value
+        .trim();
+
+    if(text){
+
+        document
+        .getElementById("savedMessage")
+        .innerHTML =
+        "Your words are safe on this page. 💌";
+
+    }else{
+
+        document
+        .getElementById("savedMessage")
+        .innerHTML =
+        "Write anything you want first. 🥺";
+
+    }
+
+}
+
+
+/* ===================================
+   TYPEWRITER
+   =================================== */
+
+const finalText =
+
+"Maleeha... ❤️\n\n" +
+
+"I can't promise that I'll be able to fix every bad day you have.\n\n" +
+
+"But I can promise that you don't have to go through them feeling alone.\n\n" +
+
+"When you're happy, I'll celebrate with you.\n\n" +
+
+"When you're sad, I'll sit beside you.\n\n" +
+
+"When you're tired, I'll remind you to rest.\n\n" +
+
+"And when you forget how special you are... I'll remind you.\n\n" +
+
+"So don't force yourself to smile tonight.\n\n" +
+
+"Just breathe.\n" +
+
+"Take your time.\n" +
+
+"Be gentle with yourself.\n\n" +
+
+"I'm here. Always caring. ❤️\n\n" +
+
+"— " + YOUR_NAME;
+
+
+let typingStarted=false;
+
+
+function startTyping(){
+
+    if(typingStarted){
+        return;
+    }
+
+    typingStarted=true;
+
+    const box =
+        document.getElementById("typingText");
+
+    let index=0;
+
+    function type(){
+
+        if(index < finalText.length){
+
+            box.innerHTML =
+                finalText
+                .substring(0,index+1)
+                .replace(/\n/g,"<br>");
+
+            index++;
+
+            setTimeout(type,25);
+
+        }
+
+    }
+
+    type();
+
+}
+
+
+/* ===================================
+   FINAL SURPRISE
+   =================================== */
+
+function finalSurprise(){
+
+    document
+    .getElementById("finalMessage")
+    .innerHTML =
+
+    "<div class='bigHeart'>❤️</div>" +
+
+    "<h2 class='pink'>MISSION ACCOMPLISHED.</h2>" +
+
+    "<p>Maleeha smiled. 😭💕</p>" +
+
+    "<p>My work here is done.</p>";
+
+    fireworks(50);
+
+}
+
+
+/* ===================================
+   FIREWORKS
+   =================================== */
+
+function fireworks(amount){
+
+    for(let i=0;i<amount;i++){
+
+        const item =
+            document.createElement("div");
+
+        item.className="firework";
+
+        item.innerHTML =
+            ["❤️","💗","✨","🌸","💕"]
+            [Math.floor(Math.random()*5)];
+
+        item.style.left =
+            (45+Math.random()*10)+"vw";
+
+        item.style.top =
+            (35+Math.random()*20)+"vh";
+
+        item.style.setProperty(
+            "--x",
+            (Math.random()*300-150)+"px"
+        );
+
+        item.style.setProperty(
+            "--y",
+            (Math.random()*300-150)+"px"
+        );
+
+        document.body.appendChild(item);
+
+        setTimeout(function(){
+            item.remove();
+        },1500);
+
+    }
+
+}
+
+
+/* ===================================
+   MUSIC
+   =================================== */
+
+function musicToggle(){
+
+    const music =
+        document.getElementById("music");
+
+    if(music.paused){
+
+        music.play();
+
+    }else{
+
+        music.pause();
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
